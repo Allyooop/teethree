@@ -1,4 +1,4 @@
-# Creating a website using Refinery
+# Creating a website using railsbricks as a startpoint
 
 Initial steps. Client needs capture. 
 
