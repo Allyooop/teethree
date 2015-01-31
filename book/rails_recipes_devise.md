@@ -17,7 +17,7 @@ Devise is used to create user sign in, sign up for your app. It is quite fully f
 
 ## 3. How do you install Devise?
 
-To install Devise you have to include it in your gemfile and following some steps to configure your Rails app to correctly use it.
+To install Devise you have to include it in your gemfile and follow some steps to configure your Rails app to correctly use it.
 
 In your application gemfile add the following line:
 
@@ -65,10 +65,10 @@ Devise also requires that you have a set root URL. This is vital for Devise to w
 
 To do this, you open your routes.rb file and highlight a designated root file:
 
-Assuming you have a page controller with a basic index method you could assign root to:
+Assuming you have a pages controller with a basic index method you could assign root to:
 
 ```
-root toto
+root to: pages#index
 ```
 
 
