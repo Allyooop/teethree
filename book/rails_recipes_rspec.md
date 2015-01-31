@@ -15,9 +15,7 @@
 
 To get RSpec into your Rails app you typically generate your Rails app without the default testing framework [Minitest](#).
 
-To do this you run your ```rails new``` command with the flag "-T" for test. This indicates to Rails, that your new app should not have a test framework.
-
-Don't worry we'll cover adding on in, in a second.
+To do this you run your ```rails new``` command with the additional flag "-T". Which stands for test. This indicates to Rails, that your new app should not have a test framework included. Namely, you do not want Rails to add the Minitest framework and a test folder.
 
 Let's see that rails new command in action.
 
@@ -53,10 +51,13 @@ Once this is complete you need to install RSpec into your app. Run the following
 rails generate rspec:install
 ```
 
-This will install RSpec and create a folder called ```spec/```. In a freshly installed app, this you will create three files:
+This will install RSpec and create a folder called ```spec/```. This you will also create three files:
 
-* 
-* 
-* 
+* ```.spec``` which may be invisible depending on your folder settings.
+* ```rails_helper.rb``` This file configures your Rails environment to use RSpec in the way you want it
+* ```spec_helper.rb``` This file configures your RSpec environment
 
+you are now able to use the RSpec testing framework.
+
+Your additional Rails commands will also now create files now so if you generate a model you will see a RSpec file created alongside it, within the ```/spec/``` folder, so that you can start writing your tests.
 
