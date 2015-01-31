@@ -43,7 +43,9 @@ rails generate devise:install
 
 This will generate your devise installation's configuration files as well as all of the code needed to potentially manage your users.
 
-It will however, also give you several things you have to manually configure before you can use it to generate your complete authentication system.
+Devise generates a couple of files at this stage, an initialzier and a locales file.
+
+It will however, also give you several things you have to manually configure before you can use it to generate your complete authentication system. Let's go through them now:
 
 ### Devise Configuration Requirements
 
@@ -58,6 +60,16 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 Naturally, if your port is not 3000 you need to change this.
 
 In production, you need to set your default URL to your actual host address. This configuration should be made in your ```~/config/environment/production.rb``` file.
+
+Devise also requires that you have a set root URL. This is vital for Devise to work.
+
+To do this, you open your routes.rb file and highlight a designated root file:
+
+Assuming you have a page controller with a basic index method you could assign root to:
+
+```
+root toto
+```
 
 
 Here                            
