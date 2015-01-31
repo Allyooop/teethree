@@ -7,11 +7,11 @@
 
 # Setting up Testing with RSpec
 
-1. 
+## 1. What is RSPec? 
 
-2. 
+## 2. When Should you use RSpec?
 
-3. Installing RSpec
+## 3. How do you install RSpec?
 
 To get RSpec into your Rails app you typically generate your Rails app without the default testing framework [Minitest](#).
 
@@ -61,3 +61,4 @@ you are now able to use the RSpec testing framework.
 
 Your additional Rails commands will also now create files now so if you generate a model you will see a RSpec file created alongside it, within the ```/spec/``` folder, so that you can start writing your tests.
 
+## 4. Creating Tests with RSpec
