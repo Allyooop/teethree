@@ -68,36 +68,22 @@ To do this, you open your routes.rb file and highlight a designated root file:
 Assuming you have a pages controller with a basic index method you could assign root to:
 
 ```
-root to: pages#index
+root to: 'pages#index'
 ```
 
+You next need to update your layout files in include the notice/alert flash messages. The team from Devise suggest that the simplest way to do this would be to add two paragraph tags above your ```<%= yield %>``` tag like so:
 
-Here                            
-     is an example of default_url_options appropriate for a development environment                          
-     in config/environments/development.rb:                                                                  
-                                                                                                             
-                              
-                                                                                                             
-     In production, :host should be set to the actual host of your application.                              
-                                                                                                             
-  2. Ensure you have defined root_url to *something* in your config/routes.rb.                               
-     For example:                                                                                            
-                                                                                                             
-       root to: "home#index"                                                                                 
-                                                                                                             
-  3. Ensure you have flash messages in app/views/layouts/application.html.erb.                               
-     For example:                                                                                            
-                                                                                                             
-       <p class="notice"><%= notice %></p>                                                                   
-       <p class="alert"><%= alert %></p>                                                                     
-                                                                                                             
-  4. If you are deploying on Heroku with Rails 3.2 only, you may want to set:                                
-                                                                                                             
-       config.assets.initialize_on_precompile = false                                                        
-                                                                                                             
-     On config/application.rb forcing your application to not access the DB                                  
-     or load models when precompiling your assets.                                                           
-                                                                                                             
-  5. You can copy Devise views (for customization) to your app by running:                                   
-                                                                                                             
-       rails g devise:views  
+```erb
+<!-- ~/app/views/layouts/application.html.erb -->
+<p class="notice"><%= notice %></p>                                                                   
+<p class="alert"><%= alert %></p>
+<%= yield %>
+```
+When it comes to developing your app you may want to change this and place them in a different element and create some custom styling for your messages.
+
+#### Customizing Devise Views
+
+You can copy Devise views (for customization) to your app by running:                                   
+```
+rails g devise:views
+```
