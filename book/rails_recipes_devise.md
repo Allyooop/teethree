@@ -81,9 +81,26 @@ You next need to update your layout files in include the notice/alert flash mess
 ```
 When it comes to developing your app you may want to change this and place them in a different element and create some custom styling for your messages.
 
+#### Creating User model with Devise
+
+Now that we have Devise installed let's walk through creating a User model.
+
+You can either set up the user model yourself or let Devise do it for you
+
+```
+rails generate devise ModelName
+```
+
+
 #### Customizing Devise Views
 
 You can copy Devise views (for customization) to your app by running:                                   
 ```
 rails g devise:views
+```
+
+Straight afterwards make sure you migrate your changes. If you add in any other additional Devise functionality make sure to do so as well after the changes.
+
+```
+rake db:migrate
 ```
