@@ -21,6 +21,8 @@
 
 > IMPORTANT MAKE SURE IT COMES AFTER DEVISE IN ROUTES FILE OR YOU GET INFINITE LOOP OF DEATH
 
+> IMPORTANT MAKE SURE YOU HANDLE THE SEARCH MIGRATION OPTION - NOT WELL DOCUMENTED!
+
 Some setup you must do manually if you haven't yet:                                                                                    
                                                                                                                                        
   1. Check/update Storytime initializer file (config/initializers/storytime.rb).                                                       
